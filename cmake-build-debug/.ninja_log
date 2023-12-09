@@ -1,0 +1,6 @@
+# ninja log v5
+1	25	1702129213621098454	CMakeFiles/projeto_itp_sgbd.dir/main.c.o	5ff52016cf0c9bcf
+0	19	1702127973264816356	CMakeFiles/projeto_itp_sgbd.dir/utils/mainMenu/mainMenu.c.o	d1408396cbc48247
+19	76	1702129691291632693	libMyLibrary.a	7b7585b34e8ce648
+76	93	1702129691309632640	projeto_itp_sgbd	50c9b8d4e8af12e1
+0	19	1702129691235632860	CMakeFiles/MyLibrary.dir/utils/mainMenu/mainMenu.c.o	ee22ef4c478e8658

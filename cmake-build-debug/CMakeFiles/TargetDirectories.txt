@@ -1,0 +1,4 @@
+/home/igorzig13/CLionProjects/projeto-itp-sgbd/cmake-build-debug/CMakeFiles/MyLibrary.dir
+/home/igorzig13/CLionProjects/projeto-itp-sgbd/cmake-build-debug/CMakeFiles/main.dir
+/home/igorzig13/CLionProjects/projeto-itp-sgbd/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/igorzig13/CLionProjects/projeto-itp-sgbd/cmake-build-debug/CMakeFiles/rebuild_cache.dir
