@@ -4,6 +4,7 @@
 #include "functions/createTable/createTable.h"
 #include "functions/deleteTable/deleteTable.h"
 #include "functions/listTables/listTables.h"
+#include "functions/addNewLine/addNewLine.h"
 
 int main() {
     char op = '0';
@@ -21,7 +22,7 @@ int main() {
                 listTables(0);
                 break;
             case '3':
-                // manda para função que cria uma nova linha na tabela
+                addNewLine();
                 break;
             case '4':
                 // manda para função que lista todos os dados de uma tabela

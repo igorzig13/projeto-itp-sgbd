@@ -8,15 +8,15 @@ void deleteTable(){
     }
     char nome[50];
     printf("\n* Digite o NOME da tabela a ser apagada:\n");
-    scanf(" %s", nome);
+    scanf(" %[^\n]", nome);
 
     char check = ' ';
     while(isNameAvailable(nome) == 0){
-        printf("* Atenção: Não foi encontrada uma tabela com esse nome! Tentar novamente? (s/n)");
+        printf("* Atenção: Não foi encontrada uma tabela com esse nome! Tentar novamente? (s/n)\n");
         scanf(" %c", &check);
         if (check == 's'){
             printf("* Digite o NOME da tabela a ser apagada:\n");
-            scanf(" %s", nome);
+            scanf(" %[^\n]", nome);
         } else {
             system("clear");
             printf("* Retornando ao Menu Principal...\n");

@@ -1,2 +1,4 @@
 int|String|double|
 id|nome|salario|
+1|Igor|400.00|
+2|Hendryl|4000.00|
