@@ -7,6 +7,7 @@
 #include "../../utils/numToType/numToType.h"
 #include "../tableToFile/tableToFile.h"
 #include "../updateTableList/updateTableList.h"
+#include "../../utils/isNameAvailable/isNameAvailable.h"
 
 void createTable();
 

@@ -1,14 +1,18 @@
 #include "createTable.h"
 
-
-
 void createTable(){
     int qtdColunas = 0;
     char nomeTabela[50];
 
     system("clear");
+    printf("1. Criar uma tabela:\n");
     printf("* Digite um nome para a tabela que será criada:\n");
-    scanf(" %[^\n]", nomeTabela); //TODO PRECISA CHECAR SE JÁ EXISTE UMA TABELA COM ESSE NOME!
+    scanf(" %[^\n]", nomeTabela);
+    while (isNameAvailable(nomeTabela) != 0){
+        printf("* Atenção: Já existe uma tabela criada com esse nome! Por favor, indique um nome "
+               "diferente para a tabela que será criada: \n");
+        scanf(" %[^\n]", nomeTabela);
+    }
     printf("* Digite a quantidade de colunas que a tabela terá: (Lembre-se, é necessário pelo menos "
            "uma coluna para guardar a chave primária!)\n");
     while (qtdColunas < 1){

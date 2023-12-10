@@ -1,7 +1,5 @@
 #include "updateTableList.h"
 
-
-
 void add_table(char* nome){
     FILE *arquivo;
     arquivo = fopen("../tables/tableList.txt", "a");
@@ -15,7 +13,7 @@ void add_table(char* nome){
     fclose(arquivo);
 
 }
-// TODO: FUNÇÃO AINDA PRECISA SER IMPLEMENTADA
+
 void remove_table(char *nome){
     FILE *arquivo;
     char nome_arquivo[] = "../tables/tableList.txt";

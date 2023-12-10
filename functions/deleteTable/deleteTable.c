@@ -1,6 +1,8 @@
 #include "deleteTable.h"
 
 void deleteTable(){
+    system("clear");
+    printf("7. Apagar uma tabela:\n");
     // TODO: USAR FUNÇÃO DE LISTAR TABELAS AQUI!
     char nome[50];
     printf("* Digite o nome da tabela a ser apagada:\n");
