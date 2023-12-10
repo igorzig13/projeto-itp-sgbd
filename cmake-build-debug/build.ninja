@@ -61,6 +61,12 @@ build CMakeFiles/MyLibrary.dir/functions/deleteTable/deleteTable.c.o: C_COMPILER
   OBJECT_DIR = CMakeFiles/MyLibrary.dir
   OBJECT_FILE_DIR = CMakeFiles/MyLibrary.dir/functions/deleteTable
 
+build CMakeFiles/MyLibrary.dir/functions/listTables/listTables.c.o: C_COMPILER__MyLibrary_unscanned_Debug /home/igorzig13/CLionProjects/projeto-itp-sgbd/functions/listTables/listTables.c || cmake_object_order_depends_target_MyLibrary
+  DEP_FILE = CMakeFiles/MyLibrary.dir/functions/listTables/listTables.c.o.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/MyLibrary.dir
+  OBJECT_FILE_DIR = CMakeFiles/MyLibrary.dir/functions/listTables
+
 build CMakeFiles/MyLibrary.dir/functions/tableToFile/tableToFile.c.o: C_COMPILER__MyLibrary_unscanned_Debug /home/igorzig13/CLionProjects/projeto-itp-sgbd/functions/tableToFile/tableToFile.c || cmake_object_order_depends_target_MyLibrary
   DEP_FILE = CMakeFiles/MyLibrary.dir/functions/tableToFile/tableToFile.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
@@ -91,6 +97,12 @@ build CMakeFiles/MyLibrary.dir/utils/numToType/numToType.c.o: C_COMPILER__MyLibr
   OBJECT_DIR = CMakeFiles/MyLibrary.dir
   OBJECT_FILE_DIR = CMakeFiles/MyLibrary.dir/utils/numToType
 
+build CMakeFiles/MyLibrary.dir/utils/waitForKeyPress/waitForKeyPress.c.o: C_COMPILER__MyLibrary_unscanned_Debug /home/igorzig13/CLionProjects/projeto-itp-sgbd/utils/waitForKeyPress/waitForKeyPress.c || cmake_object_order_depends_target_MyLibrary
+  DEP_FILE = CMakeFiles/MyLibrary.dir/utils/waitForKeyPress/waitForKeyPress.c.o.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/MyLibrary.dir
+  OBJECT_FILE_DIR = CMakeFiles/MyLibrary.dir/utils/waitForKeyPress
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target MyLibrary
@@ -99,7 +111,7 @@ build CMakeFiles/MyLibrary.dir/utils/numToType/numToType.c.o: C_COMPILER__MyLibr
 #############################################
 # Link the static library libMyLibrary.a
 
-build libMyLibrary.a: C_STATIC_LIBRARY_LINKER__MyLibrary_Debug CMakeFiles/MyLibrary.dir/functions/createTable/createTable.c.o CMakeFiles/MyLibrary.dir/functions/deleteTable/deleteTable.c.o CMakeFiles/MyLibrary.dir/functions/tableToFile/tableToFile.c.o CMakeFiles/MyLibrary.dir/functions/updateTableList/updateTableList.c.o CMakeFiles/MyLibrary.dir/utils/isNameAvailable/isNameAvailable.c.o CMakeFiles/MyLibrary.dir/utils/mainMenu/mainMenu.c.o CMakeFiles/MyLibrary.dir/utils/numToType/numToType.c.o
+build libMyLibrary.a: C_STATIC_LIBRARY_LINKER__MyLibrary_Debug CMakeFiles/MyLibrary.dir/functions/createTable/createTable.c.o CMakeFiles/MyLibrary.dir/functions/deleteTable/deleteTable.c.o CMakeFiles/MyLibrary.dir/functions/listTables/listTables.c.o CMakeFiles/MyLibrary.dir/functions/tableToFile/tableToFile.c.o CMakeFiles/MyLibrary.dir/functions/updateTableList/updateTableList.c.o CMakeFiles/MyLibrary.dir/utils/isNameAvailable/isNameAvailable.c.o CMakeFiles/MyLibrary.dir/utils/mainMenu/mainMenu.c.o CMakeFiles/MyLibrary.dir/utils/numToType/numToType.c.o CMakeFiles/MyLibrary.dir/utils/waitForKeyPress/waitForKeyPress.c.o
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/MyLibrary.dir
   POST_BUILD = :

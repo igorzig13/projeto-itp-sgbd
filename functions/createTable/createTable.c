@@ -40,10 +40,6 @@ void createTable(){
     tableToFile(nomeTabela, qtdColunas, nome_colunas, tipo_colunas);
     add_table(nomeTabela);
 
-    printf("* A tabela %s foi criada!\nDigite qualquer tecla para voltar ao menu principal.\n",
-           nomeTabela);
-    int c;
-    while ((c = getchar()) != '\n' && c != EOF);
-    getchar();
-    system("clear");
+    printf("* A tabela %s foi criada!\n", nomeTabela);
+    waitForKeyPress();
 }

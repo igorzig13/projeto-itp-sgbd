@@ -3,6 +3,7 @@
 #include "utils/mainMenu/mainMenu.h"
 #include "functions/createTable/createTable.h"
 #include "functions/deleteTable/deleteTable.h"
+#include "functions/listTables/listTables.h"
 
 int main() {
     char op = '0';
@@ -17,7 +18,7 @@ int main() {
                 createTable();
                 break;
             case '2':
-                // manda para função que lista todas as tabelas
+                listTables(0);
                 break;
             case '3':
                 // manda para função que cria uma nova linha na tabela

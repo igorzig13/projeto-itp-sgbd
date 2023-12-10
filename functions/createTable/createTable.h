@@ -8,6 +8,7 @@
 #include "../tableToFile/tableToFile.h"
 #include "../updateTableList/updateTableList.h"
 #include "../../utils/isNameAvailable/isNameAvailable.h"
+#include "../../utils/waitForKeyPress/waitForKeyPress.h"
 
 void createTable();
 

@@ -6,6 +6,7 @@
 #include <string.h>
 #include "../updateTableList/updateTableList.h"
 #include "../../utils/isNameAvailable/isNameAvailable.h"
+#include "../listTables/listTables.h"
 
 void deleteTable();
 
