@@ -3,13 +3,15 @@
 void tableToFile(char* nome, int qtd_colunas, char nome_colunas[qtd_colunas][50], char
 tipo_colunas[qtd_colunas][20]){
 
-    strcat(nome, ".txt");
+    char nome_txt[strlen(nome)+ 5];
+    strcpy(nome_txt,nome);
+    strcat(nome_txt, ".txt");
     char caminho[] = "../tables/";
-    size_t tamanho = strlen(nome) + strlen(caminho);
+    size_t tamanho = strlen(nome_txt) + strlen(caminho);
     char endereco[tamanho + 1];
 
     strcpy(endereco, caminho);
-    strcat(endereco, nome);
+    strcat(endereco, nome_txt);
 
     FILE *arquivo;
     arquivo = fopen(endereco, "w");
