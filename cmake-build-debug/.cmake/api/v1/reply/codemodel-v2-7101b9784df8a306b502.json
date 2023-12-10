@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.26"
@@ -20,7 +20,7 @@
 					]
 				}
 			],
-			"name" : "Release",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -41,14 +41,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "MyLibrary::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-MyLibrary-Release-1e987afeb5eb31175651.json",
+					"jsonFile" : "target-MyLibrary-Debug-0ed0033c6f022ef14fee.json",
 					"name" : "MyLibrary",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-Release-f3fae880f4689e4813e0.json",
+					"jsonFile" : "target-main-Debug-75dcb17e761432a664e7.json",
 					"name" : "main",
 					"projectIndex" : 0
 				}
@@ -58,7 +58,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/igorzig13/CLionProjects/projeto-itp-sgbd/cmake-build-release",
+		"build" : "/home/igorzig13/CLionProjects/projeto-itp-sgbd/cmake-build-debug",
 		"source" : "/home/igorzig13/CLionProjects/projeto-itp-sgbd"
 	},
 	"version" : 

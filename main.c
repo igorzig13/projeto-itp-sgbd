@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "utils/mainMenu/mainMenu.h"
 #include "functions/createTable/createTable.h"
+#include "functions/deleteTable/deleteTable.h"
 
 int main() {
     char op = '0';
@@ -31,10 +32,10 @@ int main() {
                 // manda para função que apaga uma tupla (coluna ou linha) de uma tabela
                 break;
             case '7':
-                // manda para função que apaga uma tabela.
+                deleteTable();
                 break;
             case '8':
-                // deve encerrar o programa
+                // encerrar o programa
                 printf("* Deseja realmente sair? (s/n)\n");
                 scanf(" %c", &confirmaSaida);
                 if (confirmaSaida == 's'){

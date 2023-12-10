@@ -1,2 +1,2 @@
 int|String|double|
-ID|Nome|Salario|
+id|nome|salario|

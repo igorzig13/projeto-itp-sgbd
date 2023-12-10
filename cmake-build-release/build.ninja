@@ -55,6 +55,12 @@ build CMakeFiles/MyLibrary.dir/functions/createTable/createTable.c.o: C_COMPILER
   OBJECT_DIR = CMakeFiles/MyLibrary.dir
   OBJECT_FILE_DIR = CMakeFiles/MyLibrary.dir/functions/createTable
 
+build CMakeFiles/MyLibrary.dir/functions/deleteTable/deleteTable.c.o: C_COMPILER__MyLibrary_unscanned_Release /home/igorzig13/CLionProjects/projeto-itp-sgbd/functions/deleteTable/deleteTable.c || cmake_object_order_depends_target_MyLibrary
+  DEP_FILE = CMakeFiles/MyLibrary.dir/functions/deleteTable/deleteTable.c.o.d
+  FLAGS = -O3 -DNDEBUG -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/MyLibrary.dir
+  OBJECT_FILE_DIR = CMakeFiles/MyLibrary.dir/functions/deleteTable
+
 build CMakeFiles/MyLibrary.dir/functions/tableToFile/tableToFile.c.o: C_COMPILER__MyLibrary_unscanned_Release /home/igorzig13/CLionProjects/projeto-itp-sgbd/functions/tableToFile/tableToFile.c || cmake_object_order_depends_target_MyLibrary
   DEP_FILE = CMakeFiles/MyLibrary.dir/functions/tableToFile/tableToFile.c.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu11 -fdiagnostics-color=always
@@ -87,7 +93,7 @@ build CMakeFiles/MyLibrary.dir/utils/numToType/numToType.c.o: C_COMPILER__MyLibr
 #############################################
 # Link the static library libMyLibrary.a
 
-build libMyLibrary.a: C_STATIC_LIBRARY_LINKER__MyLibrary_Release CMakeFiles/MyLibrary.dir/functions/createTable/createTable.c.o CMakeFiles/MyLibrary.dir/functions/tableToFile/tableToFile.c.o CMakeFiles/MyLibrary.dir/functions/updateTableList/updateTableList.c.o CMakeFiles/MyLibrary.dir/utils/mainMenu/mainMenu.c.o CMakeFiles/MyLibrary.dir/utils/numToType/numToType.c.o
+build libMyLibrary.a: C_STATIC_LIBRARY_LINKER__MyLibrary_Release CMakeFiles/MyLibrary.dir/functions/createTable/createTable.c.o CMakeFiles/MyLibrary.dir/functions/deleteTable/deleteTable.c.o CMakeFiles/MyLibrary.dir/functions/tableToFile/tableToFile.c.o CMakeFiles/MyLibrary.dir/functions/updateTableList/updateTableList.c.o CMakeFiles/MyLibrary.dir/utils/mainMenu/mainMenu.c.o CMakeFiles/MyLibrary.dir/utils/numToType/numToType.c.o
   LANGUAGE_COMPILE_FLAGS = -O3 -DNDEBUG
   OBJECT_DIR = CMakeFiles/MyLibrary.dir
   POST_BUILD = :

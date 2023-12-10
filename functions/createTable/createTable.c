@@ -1,9 +1,11 @@
 #include "createTable.h"
 
-int qtdColunas = 0;
-char nomeTabela[50];
+
 
 void createTable(){
+    int qtdColunas = 0;
+    char nomeTabela[50];
+
     system("clear");
     printf("* Digite um nome para a tabela que será criada:\n");
     scanf(" %[^\n]", nomeTabela); //TODO PRECISA CHECAR SE JÁ EXISTE UMA TABELA COM ESSE NOME!
