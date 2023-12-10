@@ -19,3 +19,10 @@
 0	40	1702218286520917744	CMakeFiles/MyLibrary.dir/functions/createTable/createTable.c.o	f0f4573ccb77aed7
 40	71	1702218286550917732	libMyLibrary.a	c489dc8b4276d1c8
 71	89	1702218286569917724	main	fc1adfd206d29eaa
+0	68	1702218938367661296	CMakeFiles/main.dir/main.c.o	1032a415b9b5721b
+0	73	1702218938373661294	CMakeFiles/MyLibrary.dir/functions/deleteTable/deleteTable.c.o	dd7802621f1f3fe5
+73	172	1702218938469661256	libMyLibrary.a	c489dc8b4276d1c8
+172	198	1702218938497661245	main	fc1adfd206d29eaa
+0	34	1702219144856580061	CMakeFiles/MyLibrary.dir/functions/deleteTable/deleteTable.c.o	dd7802621f1f3fe5
+34	66	1702219144886580050	libMyLibrary.a	c489dc8b4276d1c8
+66	86	1702219144908580041	main	fc1adfd206d29eaa
