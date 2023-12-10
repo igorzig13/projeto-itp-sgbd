@@ -1,12 +1,10 @@
 # ninja log v5
 0	78	1702139841234116489	CMakeFiles/MyLibrary.dir/utils/numToType/numToType.c.o	77f6908d43268f2
 0	29	1702130219468061734	CMakeFiles/projeto_itp_sgbd.dir/main.c.o	32b0a4a95d6ef32d
-75	136	1702146926117001440	libMyLibrary.a	442d58329e18ed16
-0	75	1702146926057001635	CMakeFiles/MyLibrary.dir/functions/createTable/createTable.c.o	f0f4573ccb77aed7
+37	67	1702158371660982095	libMyLibrary.a	bfa38edbfd909a6c
+0	45	1702157243152065493	CMakeFiles/MyLibrary.dir/functions/createTable/createTable.c.o	f0f4573ccb77aed7
+0	37	1702158371631982174	CMakeFiles/MyLibrary.dir/functions/tableToFile/tableToFile.c.o	ad12c8c17a4b9714
 46	78	1702139841234116489	CMakeFiles/main.dir/utils/numToType/numToType.c.o	e775e2938463b170
-62	79	1702143802951618264	main	fc1adfd206d29eaa
-0	75	1702146926057001635	CMakeFiles/main.dir/main.c.o	1032a415b9b5721b
+67	86	1702158371680982041	main	fc1adfd206d29eaa
+1	30	1702157243137065535	CMakeFiles/main.dir/main.c.o	1032a415b9b5721b
 0	22	1702131891572065300	CMakeFiles/MyLibrary.dir/utils/mainMenu/mainMenu.c.o	4f76f0686f438df8
-0	25	1702146946275935967	CMakeFiles/MyLibrary.dir/functions/tableToFile/tableToFile.c.o	ad12c8c17a4b9714
-25	53	1702146946302935879	libMyLibrary.a	bfa38edbfd909a6c
-53	71	1702146946321935817	main	fc1adfd206d29eaa

@@ -31,12 +31,13 @@ void createTable(){
         }
     }
 
-    // TODO: IMPLEMENTAR A FUNÇÃO ABAIXO
     tableToFile(nomeTabela, qtdColunas, nome_colunas, tipo_colunas);
+    add_table(nomeTabela);
 
     printf("* A tabela %s foi criada!\nDigite qualquer tecla para voltar ao menu principal.\n",
            nomeTabela);
-    char aux = ' ';
-    scanf(" %c", &aux);
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+    getchar();
     system("clear");
 }

@@ -6,6 +6,7 @@
 #include <string.h>
 #include "../../utils/numToType/numToType.h"
 #include "../tableToFile/tableToFile.h"
+#include "../updateTableList/updateTableList.h"
 
 void createTable();
 
