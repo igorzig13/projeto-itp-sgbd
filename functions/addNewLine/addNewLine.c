@@ -23,7 +23,7 @@ void addNewLine(){
             }
         }
         system("clear");
-        printf("* Adicionados dados à tabela \"%s\":\n", nome);
+        printf("* Adicionando dados à tabela \"%s\":\n", nome);
         FILE *arquivo = openTableFile(nome);
 
         char **tipos = getRowInfo(arquivo,0);
@@ -36,14 +36,21 @@ void addNewLine(){
             char auxC;
             float auxF;
             double auxD;
+            char auxKey[50];
 
             if (i == 0){
                 printf("* Digite um valor para a coluna %s:\n* ATENÇÃO: esta é a chave primária,"
                        " portanto seu valor deve ser diferente dos já cadastrados!\n",
                        nome_colunas[i]);
                 scanf(" %d", &aux);
-                // TODO: VERIFICAR SE A CHAVE É ÚNICA
-                sprintf(novos_dados[i],"%d", aux);
+                sprintf(auxKey,"%d", aux);
+                // GARANTE QUE A CHAVE É ÚNICA:
+                while (doKeyExists(auxKey, arquivo) != 0){
+                    printf("* Erro: Já existe uma chave com esse valor! Tente novamente:\n");
+                    scanf(" %d", &aux);
+                    sprintf(auxKey,"%d", aux);
+                }
+                strcpy(novos_dados[i], auxKey);
             } else if (strcmp(tipos[i], "int") == 0){
                 printf("* Digite um valor para a coluna %s (tipo: int):\n", nome_colunas[i]);
                 scanf(" %d", &aux);
@@ -55,7 +62,7 @@ void addNewLine(){
             } else if (strcmp(tipos[i], "float") == 0) {
                 printf("* Digite um valor para a coluna %s (tipo: float):\n", nome_colunas[i]);
                 scanf(" %f", &auxF);
-                sprintf(novos_dados[i], ".2%f", auxF);
+                sprintf(novos_dados[i], "%.2f", auxF);
             } else if (strcmp(tipos[i], "double") == 0) {
                 printf("* Digite um valor para a coluna %s (tipo: double):\n", nome_colunas[i]);
                 scanf(" %lf", &auxD);
@@ -73,4 +80,17 @@ void addNewLine(){
         fputs("\n",arquivo);
         fclose(arquivo);
     }
+}
+// Função deve retornar 1 se encontrar outra chave no sistema com o mesmo valor
+int doKeyExists(char* chave, FILE *arquivo){
+    char linha[1000];
+    char valor[50];
+    rewind(arquivo);
+    while (fgets(linha, sizeof(linha), arquivo) != NULL) {
+        strcpy(valor, strtok(linha,"|"));
+        if(strcmp(chave,valor) == 0){
+            return 1;
+        }
+    }
+    return 0;
 }

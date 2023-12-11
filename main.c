@@ -5,6 +5,7 @@
 #include "functions/deleteTable/deleteTable.h"
 #include "functions/listTables/listTables.h"
 #include "functions/addNewLine/addNewLine.h"
+#include "functions/removeData/removeData.h"
 
 int main() {
     char op = '0';
@@ -31,7 +32,7 @@ int main() {
                 // manda para função que pesquisa um valor em uma tabela
                 break;
             case '6':
-                // manda para função que apaga uma tupla (coluna ou linha) de uma tabela
+                removeData();
                 break;
             case '7':
                 deleteTable();

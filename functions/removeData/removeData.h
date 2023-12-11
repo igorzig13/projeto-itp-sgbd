@@ -1,5 +1,5 @@
-#ifndef ADD_NEW_LINE
-#define ADD_NEW_LINE
+#ifndef REMOVE_DATA
+#define REMOVE_DATA
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,9 +7,10 @@
 #include "../../utils/waitForKeyPress/waitForKeyPress.h"
 #include "../listTables/listTables.h"
 #include "../../utils/isNameAvailable/isNameAvailable.h"
-#include "../../utils/getRowInfo/getRowInfo.h"
 #include "../../utils/openTableFile/openTableFile.h"
+#include "../../utils/getRowInfo/getRowInfo.h"
 
-void addNewLine();
-int doKeyExists(char* chave, FILE *arquivo);
+void removeData();
+void deleteRow(char* nome, char* key);
+
 #endif
