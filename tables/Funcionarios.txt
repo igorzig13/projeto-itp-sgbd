@@ -1,5 +1,3 @@
 int|String|double|
-id|nome|salario|
-1|Igor|400.00|
-2|Hendryl|4000.00|
-3|Thanos|90000.00|
+ID|NOME|SALARIO|
+1|Igor|500.00|

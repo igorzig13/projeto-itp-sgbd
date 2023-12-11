@@ -49,7 +49,7 @@ void removeData(){
         }
 
         fclose(arquivo);
-        deleteRow(nome, nome_chave);
+        deleteRow(nome, chave_primaria);
     }
 }
 void deleteRow(char* nome, char* key){
@@ -57,12 +57,27 @@ void deleteRow(char* nome, char* key){
     FILE *arquivoTemp = openTableFile("arquivoTemp");
 
     char linha[1000];
-    // TODO: Ver se está funcionando como esperado:
+    char stringAux[1000];
+    char *comparador;
     while (fgets(linha, sizeof(linha), arquivo) != NULL) {
-        if (doKeyExists(key, arquivo) == 0){
-            fprintf(arquivoTemp, "%s\n", linha);
+        strcpy(stringAux, linha);
+        comparador = strtok(stringAux,"|");
+        if (strcmp(comparador, key) != 0){
+            fprintf(arquivoTemp, "%s", linha);
         }
     }
     fclose(arquivoTemp);
     fclose(arquivo);
+
+    char endereco[100] = "../tables/";
+    strcat(endereco, nome);
+    strcat(endereco, ".txt");
+
+    remove(endereco);
+
+    if (rename("../tables/arquivoTemp.txt", endereco) != 0) {
+        perror("Erro ao renomear o arquivo temporário");
+    }
+    printf("* A tabela %s foi atualizada com sucesso.\n", nome);
+    waitForKeyPress();
 }
