@@ -11,6 +11,7 @@
 #include "../../utils/countColumns/countColumns.h"
 #include "../../utils/getRowInfo/getRowInfo.h"
 #include "../../utils/stringComparator/stringComparator.h"
+#include "../listTables/listTables.h"
 
 void searchValue();
 void showResults(int opc, char* nome_arquivo, char* termo, int num_coluna);

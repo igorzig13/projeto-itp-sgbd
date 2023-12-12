@@ -5,75 +5,77 @@ void searchValue(){
     printf("5. Pesquisar valor em uma tabela:\n");
     char nome[100];
 
-    printf("* Digite o nome da tabela:\n");
-    scanf(" %[^\n]", nome);
+    if (listTables(1) == 0) {
+        printf("* Digite o nome da tabela:\n");
+        scanf(" %[^\n]", nome);
 
-    char check = ' ';
-    while (isNameAvailable(nome) == 0){
-        printf("* Atenção: Não foi encontrada uma tabela com esse nome! Tentar novamente? (s/n)\n");
-        scanf(" %c", &check);
-        if (check == 's'){
-            printf("* Digite o nome da tabela:\n");
-            scanf(" %[^\n]", nome);
-        } else {
-            system("clear");
-            printf("* Você retornou ao Menu Principal...\n");
-            return;
+        char check = ' ';
+        while (isNameAvailable(nome) == 0) {
+            printf("* Atenção: Não foi encontrada uma tabela com esse nome! Tentar novamente? (s/n)\n");
+            scanf(" %c", &check);
+            if (check == 's') {
+                printf("* Digite o nome da tabela:\n");
+                scanf(" %[^\n]", nome);
+            } else {
+                system("clear");
+                printf("* Você retornou ao Menu Principal...\n");
+                return;
+            }
         }
-    }
-    system("clear");
+        system("clear");
 
-    FILE *arquivo = openTableFile(nome);
-    char** tipo_colunas = getRowInfo(arquivo,0);
-    rewind(arquivo);
-    char** nome_colunas = getRowInfo(arquivo, 1);
-    rewind(arquivo);
-    int num_colunas = countColumns(nome);
+        FILE *arquivo = openTableFile(nome);
+        char **tipo_colunas = getRowInfo(arquivo, 0);
+        rewind(arquivo);
+        char **nome_colunas = getRowInfo(arquivo, 1);
+        rewind(arquivo);
+        int num_colunas = countColumns(nome);
 
-    printf("* Tabela \"%s\" encontrada com sucesso! Ela possui as seguintes colunas:\n\n", nome);
-    for (int i = 0; i < num_colunas; i++) {
-        printf("%d. %s\n", i+1, nome_colunas[i]);
-    }
+        printf("* Tabela \"%s\" encontrada com sucesso! Ela possui as seguintes colunas:\n", nome);
+        for (int i = 0; i < num_colunas; i++) {
+            printf("%d. %s\n", i + 1, nome_colunas[i]);
+        }
 
-    int col_escolhida;
-    printf("* Selecione uma coluna para fazer a pesquisa (indique o número correspondente):\n");
-    scanf(" %d", &col_escolhida);
-
-    while (col_escolhida < 1 || col_escolhida > num_colunas){
-        printf(" * Número inválido! Tente novamente:\n");
+        int col_escolhida;
+        printf("* Selecione uma coluna para fazer a pesquisa (indique o número correspondente):\n");
         scanf(" %d", &col_escolhida);
-    }
-    col_escolhida--;
 
-    system("clear");
-    printf("* Você escolheu a coluna %s, ela possui tipo %s.\n",
-           nome_colunas[col_escolhida], tipo_colunas[col_escolhida]);
-
-    char valor_informado[100];
-    int opc = 0;
-    if (strcmp(tipo_colunas[col_escolhida], "String") == 0){
-        opc = 6;
-        printf("* Digite um termo para ser pesquisado na coluna %s:\n", nome_colunas[col_escolhida]);
-        scanf(" %[^\n]", valor_informado);
-    } else {
-        printf("* Opções:\n");
-        printf("1. Valores maiores que o informado\n");
-        printf("2. Valores maiores ou iguais ao informado\n");
-        printf("3. Valores iguais ao informado\n");
-        printf("4. Valores menores que o informado\n");
-        printf("5. Valores menores ou iguais ao informado\n");
-        scanf(" %d", &opc);
-        while (opc < 1 || opc > 5){
-            printf("* Opção inválida! Tente novamente:\n");
-            scanf(" %d", &opc);
+        while (col_escolhida < 1 || col_escolhida > num_colunas) {
+            printf(" * Número inválido! Tente novamente:\n");
+            scanf(" %d", &col_escolhida);
         }
-        printf("* Digite o valor a ser pesquisado:\n");
-        scanf(" %[^\n]", valor_informado);
-    }
+        col_escolhida--;
 
-    fclose(arquivo);
-    showResults(opc, nome, valor_informado, col_escolhida);
-    waitForKeyPress();
+        system("clear");
+        printf("* Você escolheu a coluna %s, ela possui tipo %s.\n",
+               nome_colunas[col_escolhida], tipo_colunas[col_escolhida]);
+
+        char valor_informado[100];
+        int opc = 0;
+        if (strcmp(tipo_colunas[col_escolhida], "String") == 0) {
+            opc = 6;
+            printf("* Digite um termo para ser pesquisado na coluna %s:\n", nome_colunas[col_escolhida]);
+            scanf(" %[^\n]", valor_informado);
+        } else {
+            printf("* Opções:\n");
+            printf("1. Valores maiores que o informado\n");
+            printf("2. Valores maiores ou iguais ao informado\n");
+            printf("3. Valores iguais ao informado\n");
+            printf("4. Valores menores que o informado\n");
+            printf("5. Valores menores ou iguais ao informado\n");
+            scanf(" %d", &opc);
+            while (opc < 1 || opc > 5) {
+                printf("* Opção inválida! Tente novamente:\n");
+                scanf(" %d", &opc);
+            }
+            printf("* Digite o valor a ser pesquisado:\n");
+            scanf(" %[^\n]", valor_informado);
+        }
+
+        fclose(arquivo);
+        showResults(opc, nome, valor_informado, col_escolhida);
+        waitForKeyPress();
+    }
 }
 void showResults(int opc, char* nome_arquivo, char* termo, int num_coluna){
     int num_linhas = countLines(nome_arquivo);
@@ -91,6 +93,7 @@ void showResults(int opc, char* nome_arquivo, char* termo, int num_coluna){
     double auxD[2];
 
     printf("* Os resultados que correspondem ao valor informado são:\n");
+    printLine(arquivo,1,num_colunas);
     if (strcmp(tipo, "int") == 0){
         aux[0] = atoi(termo);
         for (int i = 2; i < num_linhas; i++) {
