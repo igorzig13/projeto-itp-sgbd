@@ -79,6 +79,12 @@ build CMakeFiles/MyLibrary.dir/functions/removeData/removeData.c.o: C_COMPILER__
   OBJECT_DIR = CMakeFiles/MyLibrary.dir
   OBJECT_FILE_DIR = CMakeFiles/MyLibrary.dir/functions/removeData
 
+build CMakeFiles/MyLibrary.dir/functions/showTableData/showTableData.c.o: C_COMPILER__MyLibrary_unscanned_Debug /home/igorzig13/CLionProjects/projeto-itp-sgbd/functions/showTableData/showTableData.c || cmake_object_order_depends_target_MyLibrary
+  DEP_FILE = CMakeFiles/MyLibrary.dir/functions/showTableData/showTableData.c.o.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/MyLibrary.dir
+  OBJECT_FILE_DIR = CMakeFiles/MyLibrary.dir/functions/showTableData
+
 build CMakeFiles/MyLibrary.dir/functions/tableToFile/tableToFile.c.o: C_COMPILER__MyLibrary_unscanned_Debug /home/igorzig13/CLionProjects/projeto-itp-sgbd/functions/tableToFile/tableToFile.c || cmake_object_order_depends_target_MyLibrary
   DEP_FILE = CMakeFiles/MyLibrary.dir/functions/tableToFile/tableToFile.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
@@ -96,6 +102,12 @@ build CMakeFiles/MyLibrary.dir/utils/countColumns/countColumns.c.o: C_COMPILER__
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/MyLibrary.dir
   OBJECT_FILE_DIR = CMakeFiles/MyLibrary.dir/utils/countColumns
+
+build CMakeFiles/MyLibrary.dir/utils/countLines/countLines.c.o: C_COMPILER__MyLibrary_unscanned_Debug /home/igorzig13/CLionProjects/projeto-itp-sgbd/utils/countLines/countLines.c || cmake_object_order_depends_target_MyLibrary
+  DEP_FILE = CMakeFiles/MyLibrary.dir/utils/countLines/countLines.c.o.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/MyLibrary.dir
+  OBJECT_FILE_DIR = CMakeFiles/MyLibrary.dir/utils/countLines
 
 build CMakeFiles/MyLibrary.dir/utils/getRowInfo/getRowInfo.c.o: C_COMPILER__MyLibrary_unscanned_Debug /home/igorzig13/CLionProjects/projeto-itp-sgbd/utils/getRowInfo/getRowInfo.c || cmake_object_order_depends_target_MyLibrary
   DEP_FILE = CMakeFiles/MyLibrary.dir/utils/getRowInfo/getRowInfo.c.o.d
@@ -141,7 +153,7 @@ build CMakeFiles/MyLibrary.dir/utils/waitForKeyPress/waitForKeyPress.c.o: C_COMP
 #############################################
 # Link the static library libMyLibrary.a
 
-build libMyLibrary.a: C_STATIC_LIBRARY_LINKER__MyLibrary_Debug CMakeFiles/MyLibrary.dir/functions/addNewLine/addNewLine.c.o CMakeFiles/MyLibrary.dir/functions/createTable/createTable.c.o CMakeFiles/MyLibrary.dir/functions/deleteTable/deleteTable.c.o CMakeFiles/MyLibrary.dir/functions/listTables/listTables.c.o CMakeFiles/MyLibrary.dir/functions/removeData/removeData.c.o CMakeFiles/MyLibrary.dir/functions/tableToFile/tableToFile.c.o CMakeFiles/MyLibrary.dir/functions/updateTableList/updateTableList.c.o CMakeFiles/MyLibrary.dir/utils/countColumns/countColumns.c.o CMakeFiles/MyLibrary.dir/utils/getRowInfo/getRowInfo.c.o CMakeFiles/MyLibrary.dir/utils/isNameAvailable/isNameAvailable.c.o CMakeFiles/MyLibrary.dir/utils/mainMenu/mainMenu.c.o CMakeFiles/MyLibrary.dir/utils/numToType/numToType.c.o CMakeFiles/MyLibrary.dir/utils/openTableFile/openTableFile.c.o CMakeFiles/MyLibrary.dir/utils/waitForKeyPress/waitForKeyPress.c.o
+build libMyLibrary.a: C_STATIC_LIBRARY_LINKER__MyLibrary_Debug CMakeFiles/MyLibrary.dir/functions/addNewLine/addNewLine.c.o CMakeFiles/MyLibrary.dir/functions/createTable/createTable.c.o CMakeFiles/MyLibrary.dir/functions/deleteTable/deleteTable.c.o CMakeFiles/MyLibrary.dir/functions/listTables/listTables.c.o CMakeFiles/MyLibrary.dir/functions/removeData/removeData.c.o CMakeFiles/MyLibrary.dir/functions/showTableData/showTableData.c.o CMakeFiles/MyLibrary.dir/functions/tableToFile/tableToFile.c.o CMakeFiles/MyLibrary.dir/functions/updateTableList/updateTableList.c.o CMakeFiles/MyLibrary.dir/utils/countColumns/countColumns.c.o CMakeFiles/MyLibrary.dir/utils/countLines/countLines.c.o CMakeFiles/MyLibrary.dir/utils/getRowInfo/getRowInfo.c.o CMakeFiles/MyLibrary.dir/utils/isNameAvailable/isNameAvailable.c.o CMakeFiles/MyLibrary.dir/utils/mainMenu/mainMenu.c.o CMakeFiles/MyLibrary.dir/utils/numToType/numToType.c.o CMakeFiles/MyLibrary.dir/utils/openTableFile/openTableFile.c.o CMakeFiles/MyLibrary.dir/utils/waitForKeyPress/waitForKeyPress.c.o
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/MyLibrary.dir
   POST_BUILD = :

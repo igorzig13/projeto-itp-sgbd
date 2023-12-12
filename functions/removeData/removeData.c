@@ -1,9 +1,10 @@
 #include "removeData.h"
 #include "../addNewLine/addNewLine.h"
+#include "../showTableData/showTableData.h"
 
 void removeData(){
     system("clear");
-    printf("6. Remover linha ou coluna de uma tabela:\n");
+    printf("6. Remover um registro de uma tabela:\n");
 
     char nome[100];
     char chave_primaria[50];
@@ -25,6 +26,13 @@ void removeData(){
             }
         }
 
+        system("clear");
+        check = ' ';
+        printf("* Deseja antes exibir os dados da tabela %s? (s/n)\n ", nome);
+        scanf(" %c", &check);
+        if (check == 's'){
+            showTableData(nome);
+        }
         FILE *arquivo = openTableFile(nome);
         char* nome_chave = getRowInfo(arquivo, 1)[0];
         printf("* A chave primária da tabela %s é dada pela coluna %s, digite a chave do registro que "

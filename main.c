@@ -6,6 +6,7 @@
 #include "functions/listTables/listTables.h"
 #include "functions/addNewLine/addNewLine.h"
 #include "functions/removeData/removeData.h"
+#include "functions/showTableData/showTableData.h"
 
 int main() {
     char op = '0';
@@ -26,7 +27,7 @@ int main() {
                 addNewLine();
                 break;
             case '4':
-                // manda para função que lista todos os dados de uma tabela
+                askForTableName();
                 break;
             case '5':
                 // manda para função que pesquisa um valor em uma tabela

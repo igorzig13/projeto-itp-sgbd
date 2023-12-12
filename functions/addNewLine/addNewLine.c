@@ -58,6 +58,7 @@ void addNewLine(){
             } else if (strcmp(tipos[i], "char") == 0){
                 printf("* Digite um valor para a coluna %s (tipo: char):\n", nome_colunas[i]);
                 scanf(" %c", &auxC);
+                while ((getchar()) != '\n');
                 sprintf(novos_dados[i],"%c", auxC);
             } else if (strcmp(tipos[i], "float") == 0) {
                 printf("* Digite um valor para a coluna %s (tipo: float):\n", nome_colunas[i]);
@@ -79,6 +80,8 @@ void addNewLine(){
         }
         fputs("\n",arquivo);
         fclose(arquivo);
+        printf("* Registro adicionado com sucesso!\n");
+        waitForKeyPress();
     }
 }
 // Função deve retornar 1 se encontrar outra chave no sistema com o mesmo valor

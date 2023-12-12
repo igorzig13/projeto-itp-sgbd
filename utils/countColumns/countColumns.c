@@ -18,5 +18,5 @@ int countColumns(char* tableName){
     }
 
     fclose(arquivo);
-    return contador;
+    return contador-1;
 }
