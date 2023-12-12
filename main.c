@@ -1,12 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "utils/mainMenu/mainMenu.h"
-#include "functions/createTable/createTable.h"
-#include "functions/deleteTable/deleteTable.h"
-#include "functions/listTables/listTables.h"
-#include "functions/addNewLine/addNewLine.h"
-#include "functions/removeData/removeData.h"
-#include "functions/showTableData/showTableData.h"
+#include "main.h"
 
 int main() {
     char op = '0';
@@ -30,7 +22,7 @@ int main() {
                 askForTableName();
                 break;
             case '5':
-                // manda para função que pesquisa um valor em uma tabela
+                searchValue();
                 break;
             case '6':
                 removeData();

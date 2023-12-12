@@ -8,4 +8,4 @@ file(GLOB_RECURSE SOURCES "functions/*.c" "utils/*.c" "tables/*.txt")
 add_library(MyLibrary ${SOURCES})
 add_executable(main main.c)
 
-target_link_libraries(main MyLibrary)
+target_link_libraries(main MyLibrary -lm)

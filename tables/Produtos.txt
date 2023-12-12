@@ -1,0 +1,4 @@
+int|String|char|float|
+TAG|NOME|CODIGO|PRECO|
+78|Geladeira|k|1299.00|
+899|Batedeira|4|199.00|

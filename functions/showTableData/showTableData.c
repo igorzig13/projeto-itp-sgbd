@@ -18,7 +18,7 @@ void askForTableName(){
                 scanf(" %[^\n]", nome);
             } else {
                 system("clear");
-                printf("* Retornando ao Menu Principal...\n");
+                printf("* Você retornou ao Menu Principal...\n");
                 return;
             }
         }
